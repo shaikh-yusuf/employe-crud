@@ -1,5 +1,4 @@
 let form = document.getElementById("form");
-let submiteButton=document.querySelector('#form > button')
 
 let tbody = document.getElementById("tbody");
 
@@ -51,13 +50,13 @@ function deleteEmp(buttonRef) {
 function editEmp(buttonRef) {
   let row = buttonRef.parentNode.parentNode;
   let td = row.querySelectorAll("td");
-
+  console.log(td);
   let empolyee = {
     empid: td[0].innerText,
     name: td[1].innerText,
     email: td[2].innerText,
   };
- submiteButton.innerText='Update'
+
   prefillform(empolyee);
   editoption = {
     editEmpolye: true,
@@ -78,14 +77,13 @@ function editRecord(empolyee) {
   cells[0].innerText = empolyee.empid;
   cells[1].innerText = empolyee.name;
   cells[2].innerText = empolyee.email;
-  submiteButton.innerText='Submit'
   editoption = {
     editEmpolye: false,
     rowEle: null,
   };
 }
 
-// // serach
+// serach
 
 function searchFun() {
   let searchitem = document.getElementById("searchBar");
@@ -93,6 +91,7 @@ function searchFun() {
     emplo.name.toUpperCase().includes(searchitem.value.toUpperCase())
   );
   console.log(filteremp);
+
 }
 
 

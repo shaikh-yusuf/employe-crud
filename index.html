@@ -53,11 +53,15 @@
               </div>
             </div>
 
-          
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
+
         <div class="col-8">
+          <input type="text" id="searchBar" />
+          <button type="button" class="btn btn-secondary" onclick="searchFun()">
+            Secondary
+          </button>
           <table class="table table-striped">
             <thead>
               <tr>
@@ -69,6 +73,7 @@
             </thead>
             <tbody id="tbody"></tbody>
           </table>
+       
         </div>
       </div>
     </div>
